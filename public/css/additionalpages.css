@@ -1,0 +1,157 @@
+
+/* --------------------------------------------------------------------
+    Section INTRO
+-----------------------------------------------------------------------*/
+#intro{
+    background: url("../images/main/IMG_2848.png") no-repeat 70% 10% ;
+}
+/* --------------------------------------------------------------------
+    Section HOW IT WORKS
+-----------------------------------------------------------------------*/
+#how-it-works h1{
+    color: #343434;
+}
+.step-card{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.step-card p{
+    font-family: 'Open Sans';
+    font-weight: 400;
+    color:#4a494a;
+}
+
+.step-card a{
+    position: absolute;
+}
+.step-card a{
+    top:70%;
+}
+
+@media screen and (max-width: 509px){
+    .step-card{
+        padding: 1.5rem !important ;
+    }
+}
+
+/* --------------------------------------------------------------------
+    why-bellom-section
+-----------------------------------------------------------------------*/
+.adv-card{
+    display: flex;
+    align-items: flex-start;
+}
+@media (max-width: 576px) {
+    .adv-card{
+        display: block !important;
+    }
+    .adv-card * {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+/* --------------------------------------------------------------------
+    bellom-signature-cleaning
+-----------------------------------------------------------------------*/
+#bellom-signature-cleaning{
+    background: #fcfcfc;
+}
+#bellom-signature-cleaning h1 div{
+    position: relative;
+}
+#bellom-signature-cleaning h1 div::after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #ff7600;
+    border-radius: 100%;
+}
+.desc,
+.note,
+.question{
+    background: white;
+}
+.desc>h3{
+    font-size: 24px !important;
+}
+.desc>div h3,
+.note h3{
+    color:#ff7600;
+}
+.desc ul{
+    list-style: none;
+}
+.bath{
+    background: url('../images/bellom-signature-cleaning/jared-rice-408402-unsplash.jpg') center center;
+    background-size: cover;
+}
+.kitchen{
+    background: url('../images/bellom-signature-cleaning/jason-briscoe-332507-unsplash.jpg') center center;
+    background-size: cover;   
+}
+.bedroom{
+    background: url('../images/bellom-signature-cleaning/pexels-photo-90319.jpeg') left center;
+    background-size: cover;   
+}
+.note{
+    display: flex;
+    align-items: center;
+}
+.note .circle {
+    width: 10px;
+    height: 10px;
+    background: #ff7600;
+    border-radius: 100%;
+}
+@media (max-width: 991px) {
+    .bath,
+    .kitchen,
+    .bedroom{
+        height: 50vh;
+    }
+}
+/* --------------------------------------------------------------------
+    FAQ
+-----------------------------------------------------------------------*/
+
+#FAQ{
+    background: #fcfcfc;
+    transition: 0.3s;
+}
+#FAQ .link {
+    color: #ff7600;
+}
+#FAQ a {
+    color: #ff7600;
+    text-decoration: underline;
+}
+#FAQ p {
+    opacity: 0;
+    display: none;
+}
+.question{
+    cursor: pointer;
+    user-select: none;
+}
+.question img {
+    transform: rotate(0deg);
+    transition: 0.2s;
+}
+.question.show img{
+    transform: rotate(180deg);
+}
+.question.show h3{
+    color: #ff7600;
+    transition: 0.2s;
+}
+.question.show p {
+    opacity: 1 !important;
+    display: block !important;
+    transition: 0.2s;
+}

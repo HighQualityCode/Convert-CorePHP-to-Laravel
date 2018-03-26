@@ -1,0 +1,274 @@
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+}
+.navbar-light {
+    background: #ffffff;
+}
+.navbar-nav{
+    font-family: 'Open Sans';
+    font-weight: 400;
+    letter-spacing: 0.1px;
+}
+.nav-item{
+    position: relative;
+}
+.navbar-light .navbar-nav .nav-link{
+    color: #343434;
+    transition: 0.2s;
+    font-weight: 600;
+}
+.navbar-light .navbar-nav .nav-link:hover{
+    color: #ff7600;
+}
+.dropdown {
+    transition: 0.3s;
+}
+.dropdown-menu{
+    background-color: rgb(250, 250, 250);
+    border: 0px;
+    font-size: 14px !important;
+    left: -50%;
+}
+.navbar-nav .dropdown-menu{
+    transition: background-color 0.2s;
+}
+.navbar-nav .dropdown-menu .dropdown-item:hover{
+    background: #343434;
+    color: white;
+    transition: 0.3s;
+}
+.dropdown-toggle::after{
+    position: absolute;
+    background: url('../images/arrow.svg');
+    background-size: contain;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+    border-top: none;
+    width:8px;
+    height: 8px;
+    top:17px;
+    left: 95%;
+}
+.btn-primary{
+    position: relative;
+    z-index: 1;
+    background: #ff7600;
+    color: white !important;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    border: 1px solid #ff7600;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.footer .footer-buttons .btn-outline-primary,
+.btn-outline-primary{
+    font-family: 'Open Sans';
+    font-weight: 600;
+    color: #ff7600;
+    border: 1px solid #ff7600;
+    display: flex;
+    align-items: center;
+    fill: #ff7600 !important;
+    padding: 15px 15px;
+}
+.btn-primary:active,
+.btn-primary:focus,
+.btn-outline-primary:active,
+.btn-outline-primary:focus,{
+  border-color: #fd9941!important;
+  background: #fd9941 !important;
+  box-shadow: none !important;
+}
+.btn-outline-primary:active,
+.btn-outline-primary:focus{
+    color: white;
+    fill: white;
+}
+.btn-outline-primary:hover,
+.btn-primary:hover,
+.footer .footer-buttons .btn-outline-primary:hover{
+    border: 1px solid #fd9941;
+    background: hsl(28, 98%, 62%);
+    fill: white !important;
+    color:white;
+}
+
+.active::after{
+    content: '';
+    position: absolute;
+    top: 153%;
+    width: 100%;
+    height: 4px;
+    background: #ff7600;
+}
+.navbar-light .navbar-nav .active .nav-link{
+    color: #ff7600;
+}
+
+h1{
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 48px;
+}
+#download-section li,
+.step-card h3,
+.adv-card h3,
+.desc h3,
+.note h3,
+.question h3{
+    font-family: 'Open Sans';
+    font-size: 18px !important;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 991px){
+    .active::after{
+        height: 0px;
+    }
+}
+
+@media screen and (max-width: 768px){
+}
+.container{
+    max-width: 80vw;
+}
+/* --------------------------------------------------------------------
+    Section INTRO
+-----------------------------------------------------------------------*/
+#intro{
+    display: flex;
+    height: 80vh;
+    flex-direction:column;
+    justify-content:center;
+    background-size: cover;
+    color: white;
+    padding: 20vh 0vh 10vh 0vh;
+}
+#intro p{
+    font-family: 'Open Sans';
+    font-weight:400;
+    font-size: 18px;
+}
+@media screen and (max-width: 768px){
+    #intro{
+        height: 85vh;
+    } 
+}
+/* --------------------------------------------------------------------
+    Footer
+-----------------------------------------------------------------------*/
+#creditionals{
+    border-top: 1px solid #f5f5f5;
+    font-size: 14px;
+    color: #919191
+}
+.footer{
+  font-family: 'Open Sans';
+}
+.footer h4{
+    font-weight: 700;
+    font-size: 14px;
+}
+.footer ul{
+    list-style: none;
+    padding: 0;
+}
+.footer li{
+    font-size: 14px;
+    padding: 10px 0px;
+}
+.footer li a{
+    color: #343434;
+    text-decoration: none;
+}
+.footer a:hover{
+    color:#ff7600; 
+}
+.footer-buttons a span{
+    align-items: flex-start;
+}
+#socials a{
+    display: block;
+    cursor: pointer;
+}
+#socials a svg {
+    width:40px;
+    height: 45px;
+    margin-right: 20px;
+    fill: #3434349a;
+    transition: 0.2s;
+}
+#socials a:hover svg{
+    fill: #ff7600;
+}
+@media (max-width: 576px){
+    .footer-buttons a:first-child{
+        margin-right: auto !important;
+    }
+    #creditionals a{
+        margin: 15px 0px;
+    }
+    #creditionals p {
+        margin-top: 30px;
+    }
+}
+@media (max-width: 478px){
+    .footer-buttons a{
+        width: 100%;
+    }
+    .desc,
+    .note{
+        padding: 20px 15px !important;
+    }
+    .question{
+        padding: 20px 10px !important;
+    }
+    #FAQ.container,
+    #bellom-signature-cleaning.container{
+        padding: 0;
+    }
+}
+/* --------------------------------------------------------------------
+    download-section
+-----------------------------------------------------------------------*/
+#download-section{
+    background: #fcfcfc;
+    overflow: hidden;
+    height:50vh;
+}
+#download-section img {
+    height: 100%;
+}
+#download-section ul {
+    list-style-image: url('../images/check-mark.svg')
+}
+#download-section a{
+    align-items: center;
+}
+#download-section a div {
+    text-transform: none;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Open Sans'
+}
+.text-uppercase{
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: 'Roboto';
+    font-weight: 600;
+}
+
+@media (max-width: 576px) {
+    #download-section {
+        height: 70vh;
+    }
+    #download-section a {
+        width: 100%;
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
